@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class BinarySearchQ1 {
     public static void main(String[] args) {
 
-        int[] nums = {1};
-        int target = 1;
+        int[] nums = {5,5,6,6,7,8,9};
+        int target = 6;
         int[] result = searchRange(nums, target);
         System.out.println(Arrays.toString(result));
     }
