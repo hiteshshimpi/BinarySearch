@@ -5,7 +5,7 @@ package BinarySearch;
 
 public class BinarySearch2 {
     public static void main(String[] args) {
-        int [] arr = {1, 3, 5, 6 , 6, 7, 7, 9};
+        int [] arr = {3,5,5,8,8,10,12};
         int target = 6;
         int start =0;
         int end= arr.length-1;
@@ -14,15 +14,20 @@ public class BinarySearch2 {
         {
             int mid= start + (end - start) / 2;
 
-            if(arr[mid] <= target)
+            if(arr[mid] < target)
             {
-               start =mid +1;
+                end = mid - 1;
             }
-            else
+            if (arr[mid] > target)
             {
-                end =mid;
+                start=mid +1;
+                System.out.println(mid);
+                return;
+            }
+            if (arr[mid]==target)
+            {
+                start =mid+1;
             }
         }
-        System.out.println(start);
     }
 }
